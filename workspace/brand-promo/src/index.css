@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global tweaks */
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: #22d3ee; /* cyan-400 */
+  color: #0b1020;
+}
+
+/* Keyframes and animation helpers */
+@keyframes gradient-move {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+.animate-gradient-move { animation: gradient-move 12s ease infinite; }
+.animate-float-slow { animation: float-slow 6s ease-in-out infinite; }
